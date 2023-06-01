@@ -1,0 +1,8 @@
+.page {
+  background-image: url(../../images/908660.jpg);
+  background-position: center top;
+  background-size: cover;
+
+  width: 100vw;
+  height: 100vh;
+}
