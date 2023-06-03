@@ -34,7 +34,7 @@ class Addcard extends React.Component {
         </Swiper>
       );
     } else {
-      return <h3 className="card__subtitle">Результат поиска будет тут</h3>;
+      return <h3 className="card__subtitle">Результаты поиска будут тут</h3>;
     }
   }
 }

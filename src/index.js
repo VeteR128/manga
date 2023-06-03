@@ -6,11 +6,11 @@ import FormSubmit from "./components/formSubmit";
 import Header from "./components/header";
 import options from "./utils/constants";
 import "./pages/index.css";
-
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.showResult = this.showResult.bind(this);
+
     this.state = {
       item: [],
     };
@@ -38,6 +38,5 @@ class App extends React.Component {
     }
   }
 }
-
 const app = ReactDOMClient.createRoot(document.getElementById("App"));
 app.render(<App />);
