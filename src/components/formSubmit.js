@@ -9,12 +9,15 @@ class FormSubmit extends React.Component {
   }
   render() {
     return (
-      <form ref={(el) => (this.form = el)}>
+      <form className="form" ref={(el) => (this.form = el)}>
         <input
+          className="form__url"
           placeholder="Ссылка на картинку"
           onChange={(e) => this.setState({ url: e.target.value })}
         />
         <input
+          className="form__button"
+          value={"Искать картинку"}
           onClick={() => {
             this.form.reset();
             this.props.onAdd({ url: this.state.url });

@@ -1,0 +1,8 @@
+.header__logo {
+  max-width: 115px;
+  transition: all ease 4s;
+}
+.header__logo:hover {
+  rotate: 360deg;
+  transition: all ease 4s;
+}

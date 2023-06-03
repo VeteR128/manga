@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y, EffectCube } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 class Addcard extends React.Component {
@@ -9,26 +9,32 @@ class Addcard extends React.Component {
     if (this.props.item.length > 0) {
       return (
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          modules={[Navigation, Pagination, Scrollbar, A11y, EffectCube]}
           spaceBetween={50}
           slidesPerView={1}
           navigation
-          pagination={{ clickable: true }}
+          effect={"cube"}
+          cubeEffect={{
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+          }}
           scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
         >
           {this.props.item.map((el) => (
-            <SwiperSlide key={(count += 1)}>
-              <img src={el.image} alt="anime" />
-              <a href={url + el.anilist}>ссылка на аниме</a>
-              <h3>{el.filename}</h3>
+            <SwiperSlide className="card" key={(count += 1)}>
+              <img className="card__img" src={el.image} alt="anime" />
+              <a className="card__link" target="_blank" href={url + el.anilist}>
+                Anilist
+              </a>
+              <h3 className="card__text">{el.filename}</h3>
             </SwiperSlide>
           ))}
         </Swiper>
       );
     } else {
-      return <h3>добавь</h3>;
+      return <h3 className="card__subtitle">Результат поиска будет тут</h3>;
     }
   }
 }

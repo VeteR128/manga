@@ -5,7 +5,7 @@ import Addcard from "./components/addCard";
 import FormSubmit from "./components/formSubmit";
 import Header from "./components/header";
 import options from "./utils/constants";
-import index from "./pages/index.css";
+import "./pages/index.css";
 
 class App extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="page">
         <Header />
         <FormSubmit onAdd={this.showResult} />
 

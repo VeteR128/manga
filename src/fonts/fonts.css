@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Ninja";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+
+  src: url(hot-ninja-std-r.woff2) format("woff2"),
+    url(hot-ninja-std-r.woff) format("woff");
+}
