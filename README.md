@@ -1,1 +1,1 @@
-# link: anime-list-liard.vercel.app
+# link: https://anime-list-liard.vercel.app/
