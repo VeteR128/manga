@@ -5,6 +5,18 @@ import axios from "axios";
 const FormSubmit = ({ animeList }) => {
   const [url, seturl] = useState("");
   let form = useRef(null);
+  let err = [
+    {
+      anilist: 1845,
+      episode: 11,
+      filename: "Не получилось найти картинку.=(",
+      from: 918.17,
+      image:
+        "https://quasa.io/storage/images/news/1wy7s2BEZhuJaqYsay2yO8QkAYe76BvTD1K7A7Gt.png",
+      similarity: 0.7466105439142234,
+      to: 918.33,
+    },
+  ];
   useEffect(() => {
     gsap.fromTo(form, { opacity: 0 }, { opacity: 1, duration: 3 });
   }, []);
@@ -15,8 +27,9 @@ const FormSubmit = ({ animeList }) => {
     try {
       const response = await axios.request(options);
       animeList(response.data.result);
+      console.log(response.data.result);
     } catch (error) {
-      console.error(error);
+      animeList(err);
     }
   };
 
