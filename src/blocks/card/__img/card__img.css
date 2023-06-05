@@ -1,8 +1,15 @@
 .card__img {
-  max-width: 30vw;
+  max-width: 25vw;
   width: 100%;
   max-height: 30vh;
   height: 100%;
   margin-top: 15px;
   border: 2px solid black;
+}
+@media screen and (max-width: 540px) {
+  .card__img {
+    max-width: 55vw;
+
+    width: 70%;
+  }
 }

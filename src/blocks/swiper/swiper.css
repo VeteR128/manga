@@ -2,7 +2,7 @@
   background-color: rgba(4, 4, 4, 0.8);
   color: white;
   width: 50%;
-  height: 50%;
+
   border: 3px solid rgb(0, 0, 0);
   border-radius: 8px;
 }
@@ -23,4 +23,18 @@
 .swiper-button-prev:hover {
   opacity: 0.6;
   transition: all ease-in-out 0.5s;
+}
+.swiper-scrollbar-drag {
+  background-color: aliceblue;
+}
+@media screen and (max-width: 540px) {
+  .swiper {
+    width: 70%;
+  }
+  .swiper-button-next {
+    display: none;
+  }
+  .swiper-button-prev {
+    display: none;
+  }
 }

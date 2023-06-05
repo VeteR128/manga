@@ -1,4 +1,13 @@
 .header__title {
-  font-size: 42px;
+  font-size: calc(24px + 18 * (100vw / 1440));
   margin-left: 15px;
+  color: rgb(189, 188, 232);
+  margin: 0;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+@media screen and (max-width: 540px) {
+  .header__title {
+    font-size: calc(12px + 12 * (100vw / 1440));
+  }
 }
